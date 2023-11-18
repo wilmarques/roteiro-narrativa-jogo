@@ -4,11 +4,10 @@
 
 Atividade avaliativa da matéria Roteiro e Narrativa
 
-- Rascunho com as principais ideias
+- [x] Rascunho com as principais ideias
   - Caracterização de personagens
   - Espago e Tempo
-- Sinopse com Enredo sintético
-- Fluxograma
+- [x] Sinopse com Enredo sintético
 - Roteiro
   - Um tutorial mostrando a dinâmica do jogo
   - Ou o início da primeira fase do jogo
