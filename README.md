@@ -1,4 +1,4 @@
-# roteiro-narrativa-jogo
+# Roteiro e Narrativa - Atividade prática
 
 ## Atividade
 
@@ -8,9 +8,11 @@ Atividade avaliativa da matéria Roteiro e Narrativa
   - Caracterização de personagens
   - Espago e Tempo
 - [x] Sinopse com Enredo sintético
-- Roteiro
+- [ ] Roteiro
   - Um tutorial mostrando a dinâmica do jogo
   - Ou o início da primeira fase do jogo
+- [ ] Fluxograma
+- [ ] Game Design Document
 
 Os elementos centrais da narrativa são:
 
