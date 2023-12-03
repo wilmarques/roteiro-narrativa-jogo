@@ -15,7 +15,10 @@
 		"vscode": {
 			"extensions": [
 				"yzhang.markdown-all-in-one",
-				"DavidAnson.vscode-markdownlint"
+				"DavidAnson.vscode-markdownlint",
+				"tomoki1207.pdf",
+				"bierner.markdown-mermaid",
+				"EditorConfig.EditorConfig"
 			]
 		}
 	},
