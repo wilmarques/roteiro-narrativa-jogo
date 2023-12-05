@@ -1,5 +1,8 @@
 {
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
-  "editor.detectIndentation": false
+  "editor.detectIndentation": false,
+  "markdown.extension.toc.levels": "2..2",
+  "markdown.extension.toc.orderedList": true,
+  "markdown.extension.toc.updateOnSave": true
 }

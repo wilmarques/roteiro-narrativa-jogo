@@ -1,0 +1,130 @@
+<h1 id="game-design-document">Game Design Document</h1>
+<ol type="1">
+<li><a href="#introdução">Introdução</a></li>
+<li><a href="#sinopse">Sinopse</a></li>
+<li><a href="#espaço-e-tempo">Espaço e Tempo</a></li>
+<li><a href="#personagens">Personagens</a></li>
+<li><a href="#gameplay">Gameplay</a></li>
+<li><a href="#fluxograma">Fluxograma</a></li>
+<li><a href="#roteiro">Roteiro</a></li>
+</ol>
+<h2 id="introdução">Introdução</h2>
+<p>Catcher é um jogo no estilo plataforma 2D em que controlamos Catcher,
+um gato guarda da cozinha de um restaurante importante. Nesse mesmo
+restaurante, ratos moram escondidos e tentam roubar a comida. O objetivo
+do gato é não permitir que os ratos roubem a comida e deixar o dono do
+restaurante orgulhoso.</p>
+<h2 id="sinopse">Sinopse</h2>
+<p>Após um restaurante fechar as suas portas, Catcher (um gato) fica
+responsável por guardar a cozinha durante a noite escura. Enquanto isso,
+ratos tentam roubar a comida sem serem capturados pelo imparável
+guarda.</p>
+<h2 id="espaço-e-tempo">Espaço e Tempo</h2>
+<p>O jogo se passa em um restaurante durante a noite, após o seu
+fechamento. O gato é o único que fica no restaurante durante a noite,
+pois é o guarda da cozinha.</p>
+<p>Todas as luzes do restaurante estão apagadas. A cozinha é iluminada
+apenas por uma luz fraca que vem da rua, através da janela.</p>
+<h2 id="personagens">Personagens</h2>
+<h3 id="dono-do-restaurante">Dono do restaurante</h3>
+<p>O dono do restaurante, que também é o chef, é um homem de 30 anos,
+magro, que veste um uniforme de cozinheiro. Ele é divertido, sorridente
+e orgulhoso do seu restaurante.</p>
+<h3 id="catcher">Catcher</h3>
+<p>Catcher, o gato, é um gato determinado e preparado para qualquer
+situação. Ele é o guarda do restaurante e não vai deixar nenhum rato
+roubar a comida do restaurante. Sempre atento vestindo seu uniforme de
+guarda e sua longa cauda.</p>
+<p>Possui diversas habilidades, como super-pulo, super-velocidade e um
+ataque especial onde sua cauda se transforma em um grande chicote para
+atacar todos os ratos de uma só vez.</p>
+<h3 id="ratos">Ratos</h3>
+<p>Espertos, traiçoeiros e rápidos, os ratos querem roubar a comida do
+restaurante sem serem pegos pelo gato. Eles são vários e estão sempre
+tentando roubar a comida do restaurante.</p>
+<p>Para isso, utilizarão de suas habilidades de correr, pular e escalar
+para roubar a comida do restaurante.</p>
+<h2 id="gameplay">Gameplay</h2>
+<h3 id="características">Características</h3>
+<p>Catcher é um jogo de plataforma 2D para dispositivos móveis. Tendo
+seu modo de jogar baseado em toques na tela, no qual o jogador deve
+tocar nos ratos para capturá-los.</p>
+<p>Também possui botões de ação na parte inferior da tela para usar as
+habilidades do Catcher, como super-pulo, super-velocidade e um ataque
+especial onde sua cauda se transforma em um grande chicote para atacar
+todos os ratos de uma só vez.</p>
+<p>Na parte superior da tela, há informações como o tempo restante para
+o restaurante abrir, a pontuação atual do jogador e a quantidade de
+especial disponível. Além de um botão para pausar o jogo.</p>
+<h3 id="mecânicas">Mecânicas</h3>
+<p>Ratos aparecem aleatoriamente na tela, saindo de esconderijos. O
+jogador deve tocar nos ratos para capturá-los, ganhando pontos e um
+pouco de especial.</p>
+<p>Aleatoriamente, múltiplos ratos podem aparecer de uma vez. Demandando
+velocidade e atenção do jogador.</p>
+<p>Alguns ratos podem tentar se esconder atrás de objetos, como panelas,
+potes e caixas. Outros tentarão escalar as paredes ou pular por cima de
+objetos.</p>
+<p>Quando o jogador acumula especial suficiente, pode usar o especial
+para capturar todos os ratos na tela. Mostrando uma animação do Catcher
+usando sua cauda como chicote para capturar todos os ratos.</p>
+<p>Na progressão das fases, a velocidade e a quantidade de ratos
+aumenta. Trazendo cada vez mais desafios para o jogador.</p>
+<h3 id="resolução">Resolução</h3>
+<p>Quando o tempo para o restaurante abrir acaba, o jogador tem sucesso
+ganhando pontos extras e passa de fase.</p>
+<p>Nesse momento, uma animação mostra o dono do restaurante chegando
+para abrir o restaurante e orgulhoso do seu gato.</p>
+<p>Caso um rato toque na comida, o jogador perde e uma animação mostra o
+dono do restaurante chegando para abrir o restaurante e triste por ter
+perdido a comida.</p>
+<h3 id="social">Social</h3>
+<p>O jogo será integrado com o sistema de jogos do Google Play e Apple
+Game Center. Permitindo que o jogador compare sua pontuação com outros
+jogadores.</p>
+<p>Também haverá rankings semanais, onde os jogadores que mais pontuarem
+aparecerão em uma tela específica para isso.</p>
+<p>Dessa forma, os jogadores podem competir entre si para ver quem
+consegue a maior pontuação.</p>
+<h2 id="fluxograma">Fluxograma</h2>
+<h3 id="tela-inicial">Tela inicial</h3>
+<figure>
+<img src="./fluxograma-tela-inicial.svg"
+alt="Fluxograma da tela inicial" />
+<figcaption aria-hidden="true">Fluxograma da tela inicial</figcaption>
+</figure>
+<h3 id="tela-de-rankings">Tela de rankings</h3>
+<figure>
+<img src="./fluxograma-tela-rankings.svg"
+alt="Fluxograma da tela de rankings" />
+<figcaption aria-hidden="true">Fluxograma da tela de
+rankings</figcaption>
+</figure>
+<h3 id="tela-do-jogo">Tela do jogo</h3>
+<figure>
+<img src="./fluxograma-tela-jogo.svg"
+alt="Fluxograma da tela do jogo" />
+<figcaption aria-hidden="true">Fluxograma da tela do jogo</figcaption>
+</figure>
+<h2 id="roteiro">Roteiro</h2>
+<p>int. COZINHA do RESTAURANTE – noite</p>
+<p>DONO DO RESTAURANTE, um homem de 30 anos, magro, que veste um
+uniforme de cozinheiro.</p>
+<p>(sorrindo como se orgulhoso do dia de trabalho)</p>
+<p>DONO DO RESTAURANTE</p>
+<p>Que ótimo dia de trabalho! Amanhã será ainda melhor!</p>
+<p>(olha para CATCHER com um olhar de ordem)</p>
+<p>Conto com você para guardar a cozinha enquanto estou fora.</p>
+<p>DONO DO RESTAURANTE sai do restaurante, fechando a porta atrás de
+si.</p>
+<p>CATCHER se vira para a cozinha e faz sua pose de guarda, com uma
+expressão facial como se estivesse totalmente focado.</p>
+<p>FADE OUT</p>
+<p>Inicia música de suspense ao fundo.</p>
+<p>CUT TO</p>
+<p>int. COZINHA do RESTAURANTE – noite</p>
+<p>Câmera posicionada de forma a visualizar toda a cozinha e Catcher
+posicionado no centro.</p>
+<p>Música se intensifica.</p>
+<p>HUD (Botões) aparece na tela.</p>
+<p>Dinâmica do jogo inicia.</p>

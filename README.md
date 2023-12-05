@@ -2,31 +2,34 @@
 
 ## Atividade
 
-Atividade avaliativa da matéria Roteiro e Narrativa
+Nessa atividade, devemos criar um roteiro de um jogo, incluindo os elementos centrais da narrativa.
 
-- [x] Rascunho com as principais ideias
-  - Caracterização de personagens
-  - Espago e Tempo
-- [x] Sinopse com Enredo sintético
-- [ ] Roteiro
-  - Um tutorial mostrando a dinâmica do jogo
-  - Ou o início da primeira fase do jogo
-- [ ] Fluxograma
-- [ ] Game Design Document
+Além disso, devemos criar fluxogramas e iniciar o Game Design Document.
 
-Os elementos centrais da narrativa são:
+## Como gerar o arquivo final
 
-- o ponto de vista do narrador;
-- as personagens (identificação de seu papel na narrativa);
-- espago e tempo
-- O conflito principal;
-- situações-chave;
-- a resolução da história
+Foram utilizados Mermaid CLI e Pandoc, ambos usando através do Docker.
 
-## Como gerar o PDF
+> Exemplo usando arquivo `gdd.md`.
 
-Exemplo gerando para o arqivo `ideia.md`:
+1. Renderizar os diagramas no arquivo `gdd.md` e referenciá-los no arquivo `gdd.md` gerado no diretório `dist`:
 
 ```bash
-docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc/latex ideia.md -o ideia.pdf
+docker run --rm --volume "`pwd`:/data" -u `id -u`:`id -g` minlag/mermaid-cli -i gdd.md -o dist/gdd.md
 ```
+
+Esse comando gerará um arquivo `gdd.md` no diretório `dist` referenciando novos arquivos com os diagramas renderizados.
+
+Porém os nomes serão genéricos, como `gdd.md-1.svg`, `gdd.md-2.svg`, etc. Portanto é necessário renomear os arquivos para nomes mais significativos e alterar o arquivo `gdd.md` gerado no diretório `dist` para referenciar os novos nomes.
+
+2. Gerar um arquivo em formato HTML a partir do arquivo `gdd.md` gerado no diretório `dist`:
+
+```bash
+docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc/latex dist/gdd.md -o dist/gdd.html
+```
+
+3. Gerar o arquivo `gdd.pdf` a partir do arquivo `gdd.html` gerado no diretório `dist`:
+
+Entre em algum navegador e abra o arquivo `gdd.html` gerado no diretório `dist`. Depois, imprima a página como PDF.
+
+> Tentei utilizar Pandoc para esse passo, mas tive alguns problemas.

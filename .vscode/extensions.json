@@ -1,9 +1,10 @@
 {
-    "recommendations": [
-        "davidanson.vscode-markdownlint",
-        "yzhang.markdown-all-in-one",
-        "tomoki1207.pdf",
-        "bierner.markdown-mermaid",
-        "editorconfig.editorconfig"
-    ]
+  "recommendations": [
+    "davidanson.vscode-markdownlint",
+    "yzhang.markdown-all-in-one",
+    "tomoki1207.pdf",
+    "bierner.markdown-mermaid",
+    "editorconfig.editorconfig",
+    "jock.svg"
+  ]
 }
