@@ -2,7 +2,7 @@
 
 Nome do jogo: Catcher.
 
-Um jogo no estilo plataforma 2D em que controlamos Catcher, um gato guarda da cozinha de um restaurante importante. Nesse mesmo restaurante, ratos moram escondidos e tentam roubar a comida. O objetivo do gato é não permitir que os ratos roubem a comida e deixar o dono do restaurante orgulhoso.
+Catcher é um jogo no estilo plataforma 2D em que controlamos Catcher, um gato guarda da cozinha de um restaurante importante. Nesse mesmo restaurante, ratos moram escondidos e tentam roubar a comida. O objetivo do gato é não permitir que os ratos roubem a comida e deixar o dono do restaurante orgulhoso.
 
 ## Sinopse
 
@@ -154,4 +154,36 @@ graph TD
 
 ## Roteiro
 
-- Dono do restaurante aparece
+int. COZINHA do RESTAURANTE -- noite
+
+DONO DO RESTAURANTE, um homem de 30 anos, magro, que veste um uniforme de cozinheiro.
+
+(sorrindo como se orgulhoso do dia de trabalho)
+
+DONO DO RESTAURANTE
+
+Que ótimo dia de trabalho! Amanhã será ainda melhor!
+
+(olha para CATCHER com um olhar de ordem)
+
+Conto com você para guardar a cozinha enquanto estou fora.
+
+DONO DO RESTAURANTE sai do restaurante, fechando a porta atrás de si.
+
+CATCHER se vira para a cozinha e faz sua pose de guarda, com uma expressão facial como se estivesse totalmente focado.
+
+FADE OUT
+
+Inicia música de suspense ao fundo.
+
+CUT TO
+
+int. COZINHA do RESTAURANTE -- noite
+
+Câmera posicionada de forma a visualizar toda a cozinha e Catcher posicionado no centro.
+
+Música se intensifica.
+
+HUD (Botões) aparece na tela.
+
+Dinâmica do jogo inicia.
