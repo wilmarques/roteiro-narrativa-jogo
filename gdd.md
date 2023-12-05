@@ -72,21 +72,7 @@ Dessa forma, os jogadores podem competir entre si para ver quem consegue a maior
 
 ## Fluxograma
 
-- Tela inicial
-- Tela do jogo
-- Tela de rankings
-
 ### Tela inicial
-
-1. Jogador abre o jogo
-2. Tela inicial aparece
-3. Som de fundo começa a tocar
-4. Jogador toca em botão para tirar som de fundo
-   1. Som de fundo para de tocar
-5. Jogador toca em botão para ver rankings
-   1. Jogador é redirecionado para tela de rankings
-6. Jogador toca em botão para iniciar o jogo
-   1. Jogador é redirecionado para tela do jogo
 
 ```mermaid
 graph LR
@@ -103,12 +89,6 @@ graph LR
 
 ### Tela de rankinga
 
-1. Jogador é direcionado para tela de rankings
-2. Tela de rankings aparece
-3. Ranking semanal aparece
-4. Jogador toca em botão para voltar para tela inicial
-   1. Jogador é redirecionado para tela inicial
-
 ```mermaid
 graph LR
 
@@ -120,82 +100,56 @@ graph LR
 
 ### Tela do jogo
 
-1. Jogador é direcionado para tela do jogo
-2. Animação inicial aparece
-3. Cenário aparece
-4. Inicia contagem de tempo
-   1. A cada segundo, tempo diminui
-   2. Tempo chega a zero
-      1. Jogador vence
-      2. Animação de vitória aparece
-      3. Jogador avança de fase
-         1. Retorna ao passo 3
-5. Jogador toca em botão para pausar o jogo
-   1. Jogo é pausado
-   2. Contagem de tempo para
-   3. Jogador toca em botão para voltar para o jogo
-      1. Jogo é executado
-      2. Contagem de tempo continua
-6. Rato aparece
-   1. Som de rato movendo é tocado
-   2. Rato se move até a comida
-      1. Rato toca na comida
-         1. Jogador perde
-         2. Animação de derrota aparece
-         3. Jogador toca em botão para voltar para tela inicial
-            1. Jogador é redirecionado para tela inicial
-7. Jogador toca em rato para capturá-lo
-   1. Rato some
-   2. Jogador ganha pontos
-      1. Contador de pontos aumenta
-   3. Jogador ganha pontos de especial
-      1. Quantidade de especial atinge o limite
-         1. Jogador pode usar o especial
-            1. Jogador toca em botão para usar o especial
-               1. Animação do especial aparece
-               2. Todos os ratos são capturados
-               3. Jogador ganha pontos
-               4. Jogador perde todo o especial
-
 ```mermaid
 graph TD
 
   D[Derrota]
   V[Vitória]
+  J[Jogador]
+  G[Tela do jogo]
+  E[Especial]
 
-  J[/Jogador\] --> 1[Tela do jogo]
-  1 --> 2[[Mostra animação inicial]]
+  J --> G
+  G --> 2[[Mostra animação inicial]]
   2 --> 3[[Mostra cenário]]
+
   3 --> 4[[Inicia contagem de tempo]]
   4 --> 4.1[[A cada segundo, tempo diminui]]
-  4.1 --> 4.2{Tempo chegou a zero}
+  4.1 --> 4.2{Tempo chega a zero}
   4.2 --> |Sim| V
-  J --> 5{Jogador toca em botão para pausar o jogo}
-  5 --> |Sim| 6[[Pausa jogo]]
-  6 --> 7[[Contagem de tempo para]]
-  7 --> 8{Jogador toca em botão para voltar para o jogo}
-  8 --> |Sim| 9[[Executa jogo]]
-  9 --> 10[[Contagem de tempo continua]]
-  1 --> 11[[Rato aparece]]
-  11 --> 12[[Som de rato movendo é iniciado]]
-  11 --> 19{Jogador toca em rato para capturá-lo}
-  19 --> |Sim| 20[[Rato some]]
-  20 --> 21[[Jogador ganha pontos]]
-  21 --> 22[[Contador de pontos aumenta]]
-  22 --> 23[[Jogador ganha pontos de especial]]
-  23 --> 24{Quantidade de especial atinge o limite}
-  24 --> |Sim| 25[[Jogador pode usar o especial]]
-  25 --> 26{Jogador toca em botão para usar o especial}
-  26 --> |Sim| 27[[Mostra animação do especial]]
-  27 --> 28[[Todos os ratos são capturados]]
-  28 --> 29[[Jogador ganha pontos]]
-  29 --> 30[[Jogador perde todo o especial]]
-  12 --> 13[[Rato se move até a comida]]
-  13 --> 14{Rato toca na comida}
-  14 --> |Sim| D
-  15 --> 16[[Mostra animação de derrota]]
-  J --> 17{Jogador toca em botão para voltar para tela inicial}
-  17 --> |Sim| 18[Tela inicial]
+
+  J --> 5[[Jogador toca em botão para pausar o jogo]]
+  5 --> 5.1[[Jogo é pausado]]
+  5.1 --> 5.2[[Contagem de tempo para]]
+  5.2 --> 5.3[[Jogador toca em botão para voltar para o jogo]]
+  5.3 --> 5.4[[Jogo é executado]]
+  5.4 --> 5.5[[Contagem de tempo continua]]
+  5.5 --> 4.2
+
+  G --> 6[[Rato aparece]]
+  6 --> 6.1[[Som de rato movendo é tocado]]
+  6.1 --> 6.2[[Rato se move até a comida]]
+  6.2 --> 6.3{Rato toca na comida}
+  6.3 --> |Sim| D
+  6.3 --> |Não| 6.4[[Jogador toca em rato para capturá-lo]]
+  6.4 --> 6.5[[Rato some]]
+  6.5 --> 6.6[[Jogador ganha pontos]]
+  6.6 --> 6.7[[Jogador ganha pontos de especial]]
+  6.7 --> 6.8{Quantidade de especial atinge o limite}
+  6.8 --> |Sim| 6.9[[Habilita especial para uso]]
+
+  J --> 7[[Jogador toca em botão para usar o especial]]
+  7 --> E
+
+  E[[Animação do especial aparece]] --> E.1[[Todos os ratos são capturados]]
+  E.1 --> E.2[[Jogador ganha pontos]]
+  E.2 --> E.3[[Jogador perde todo o especial]]
+
+  D --> D.1[[Animação de derrota aparece]]
+  D.1 --> D.2[[Botão para voltar para tela inicial aparece]]
+
+  V --> V.1[[Animação de vitória aparece]]
+  V.1 --> V.2[[Jogador avança de fase]]
 ```
 
 ## Roteiro
